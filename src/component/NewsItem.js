@@ -10,7 +10,7 @@ export default function NewsItem(props) {
             </div>
             <p className='description'>{props.desc}</p>
             <p className='author'>By {props.author} on {props.date}</p>
-            <a href={props.newsUrl} target='_blank'>Read More</a>
+            <a href={props.newsUrl} >Read More</a>
         </div>
         <div className="sources">
           {props.source.name}
