@@ -1,24 +1,96 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./component/Navbar";
+import News from "./component/News";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoadingBar from "react-top-loading-bar";
+import { useState } from "react";
 
 function App() {
+  const [progress, setProgress] = useState(0);
+  let pagesize=6;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <LoadingBar height={3} color="black" progress={progress} />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <News setProgress={setProgress}
+                key="general"
+                country="in"
+                category="general"
+                pagesize={pagesize}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/business"
+            element={
+              <News setProgress={setProgress}
+                key="business"
+                country="in"
+                category="business"
+                pagesize={pagesize}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/sports"
+            element={
+              <News setProgress={setProgress} key="sports" country="in" category="sports" pagesize={pagesize} />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/health"
+            element={
+              <News setProgress={setProgress} key="health" country="in" category="health" pagesize={pagesize} />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/science"
+            element={
+              <News setProgress={setProgress}
+                key="science"
+                country="in"
+                category="science"
+                pagesize={pagesize}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/technology"
+            element={
+              <News setProgress={setProgress}
+                key="technology"
+                country="in"
+                category="technology"
+                pagesize={pagesize}
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/entertainment"
+            element={
+              <News setProgress={setProgress}
+                key="entertainment"
+                country="in"
+                category="entertainment"
+                pagesize={pagesize}
+              />
+            }
+          ></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
