@@ -17,7 +17,7 @@ const News = (props) => {
     let data = await fetch(url,{
       method:'POST',
       headers:{
-        "Content-type":"application/json"
+        "Content-Type":"application/json"
       },
       body:JSON.stringify({category:props.category,country:props.country,page:page,pageSize:props.pagesize})
     });
