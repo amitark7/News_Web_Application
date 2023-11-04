@@ -15,6 +15,7 @@ const News = (props) => {
     const url=`${host}`
     // const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=68cef29466d44cef89e0d613453136b2&page=${page}&pageSize=${props.pagesize}`;
     let data = await fetch(url,{
+      mode:'no-cors',
       method:'POST',
       headers:{
         "Content-Type":"application/json"
