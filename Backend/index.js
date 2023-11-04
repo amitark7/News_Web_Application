@@ -11,9 +11,9 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/news',async (req,res)=>{
-    const {category,country,page,pageSize}=req.body
+    const {category,country,page,pagesize}=req.body
     try {      
-        const url=`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=374ac95fd4854999ab06b32080e6e0d0&page=${page}&pageSize=${pageSize}`
+        const url=`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=374ac95fd4854999ab06b32080e6e0d0&page=${page}&pageSize=${pagesize}`
         const response=await fetch(url)
         const data=await response.json()
         res.send(data)
