@@ -9,7 +9,7 @@ const News = (props) => {
   const [page, setpage] = useState(1);
   const [totalResult, settotalResult] = useState(0);
 
-  const host="https://news-applications.onrender.com/news"
+  const host="https://news-applications.onrender.com"
   const updateNews = async () => {
     props.setProgress(20);
     const url=`${host}`

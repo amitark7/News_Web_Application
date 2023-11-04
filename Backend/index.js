@@ -10,7 +10,7 @@ app.get('/',(req,res)=>{
     res.send("Hello Team How Are You!!")
 })
 
-app.post('/news',async (req,res)=>{
+app.post('/',async (req,res)=>{
     const {category,country,page,pageSize}=req.body
     try {      
         const url=`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=374ac95fd4854999ab06b32080e6e0d0&page=${page}&pageSize=${pageSize}`
