@@ -24,8 +24,14 @@ export default function Navbar() {
     <div className="navbar">
       <div className="max-width">
         <div className="logo">
-          <Link to="/">NewsMonkey</Link>
+          <Link to="/"><span>Daily News</span> Network</Link>
         </div>
+        <div className="Search">
+            <input type="text" name="search"/>
+            <button className="btn">Search</button>
+        </div>
+        <div className="nav">
+        <button className="btn">Category</button>
         <ul className={show?"menu active":"menu"} >
           <li>
             <Link to="/">Home</Link>
@@ -49,6 +55,7 @@ export default function Navbar() {
             <Link to="/technology">Technology</Link>
           </li>
         </ul>
+        </div>
         <div className="logo1" onClick={ToogleClass} style={{backgroundColor:{color}}}>
           {/* <FontAwesomeIcon icon="fa-solid fa-bars" /> */}
         </div>

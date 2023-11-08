@@ -33,6 +33,9 @@
   padding: 0;
   text-decoration: none;
 }
+body{
+  background-color: #f0d9d9;
+}
 .max-width{
   width: 1300px;
   margin: auto;
@@ -41,11 +44,41 @@
   position: fixed;
   top: 0;
  width: 100%;
- background-color: crimson;
+ background-color: #b4c4d58f;
  color: #fff;
  padding: 12px 0px;
  font-family: 'Ubuntu','san-serif';
  z-index: 9999;
+}
+.navbar .Search input{
+  width: 398px;
+  border-radius: 6px;
+  padding: 8px;
+  border: 2px solid crimson;
+}
+.navbar .btn:hover{
+  background-color: crimson;
+  color: #fff;
+}
+.navbar .btn{
+  padding: 8px 12px;
+  color: crimson;
+  font-weight: 500;
+  border-radius: 6px;
+  background: transparent;
+  outline: none;
+  border: 2px solid crimson;
+  margin: 5px;
+}
+.nav:hover .menu{
+  display: block;
+}
+.menu{
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 78%;
+  background-color: #fff;
 }
 .navbar .max-width{
   display: flex;
@@ -59,25 +92,28 @@
   border-radius: 50%;
   display: none;
 }
+.navbar .max-width .logo a span:nth-child(1){
+  color: crimson;
+}
 .navbar .max-width .logo a{
-  color: #fff;
+  color: #111;
   font-size: 27px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .navbar .max-width .menu li{
-  display: inline-block;
+  display: block;
   list-style: none;
+  margin: 8px 0px;
 }
 .navbar .max-width .menu li a{
-    color: #fff;
+    color: #111;
     font-size: 16px;
     font-weight: 500;
-    padding: 6px 10px;
-    margin-left: 20px;
+    padding: 10px;
     transition: all 0.3s ease;
 }
 .navbar .max-width .menu li a:hover{
-    color: #100303;
+    color: #ac2424;
 }
 
 
