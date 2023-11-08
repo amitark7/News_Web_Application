@@ -50,7 +50,6 @@ const News = (props) => {
     setarticles(articles.concat(parsedData.articles));
     settotalResult(parsedData.totalResults);
   };
-  console.log(totalResult)
   return (
     <>
       <div className="news">

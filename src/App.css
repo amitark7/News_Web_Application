@@ -44,7 +44,7 @@ body{
   position: fixed;
   top: 0;
  width: 100%;
- background-color: #b4c4d58f;
+ background-color: black;
  color: #fff;
  padding: 12px 0px;
  font-family: 'Ubuntu','san-serif';
@@ -54,6 +54,7 @@ body{
   width: 398px;
   border-radius: 6px;
   padding: 8px;
+  outline: none;
   border: 2px solid crimson;
 }
 .navbar .btn:hover{
@@ -96,7 +97,7 @@ body{
   color: crimson;
 }
 .navbar .max-width .logo a{
-  color: #111;
+  color: #fff;
   font-size: 27px;
   font-weight: 700;
 }
