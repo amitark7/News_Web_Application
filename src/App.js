@@ -5,13 +5,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import { useState } from "react";
 
-function App() {
+function App({element}) {
   const [progress, setProgress] = useState(0);
+  const [mode,setMode]=useState(false)
+  const [search,setSearch]=useState('delhi')
+
+  const handleSearch=()=>{
+    setMode(true)
+    console.log(mode)
+  }
   let pagesize=6;
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar handleSearch={handleSearch}/>
         <LoadingBar height={3} color="black" progress={progress} />
         <Routes>
           <Route
@@ -23,6 +30,8 @@ function App() {
                 country="in"
                 category="general"
                 pagesize={pagesize}
+                mode={mode}
+                search={search}
               />
             }
           ></Route>
